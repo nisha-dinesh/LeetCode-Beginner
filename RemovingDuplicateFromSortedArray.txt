@@ -7,6 +7,7 @@ Change the array nums such that the first k elements of nums contain the unique 
 Return k.
 
 
+SOLUTION:
 
 class Solution(object):
     def removeElement(self, nums, val):
