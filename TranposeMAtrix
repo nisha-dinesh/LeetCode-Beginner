@@ -1,0 +1,24 @@
+Problem:
+Given a 2D integer array matrix, return the transpose of matrix.
+
+The transpose of a matrix is the matrix flipped over its main diagonal, switching the matrix's row and column indices.
+
+Solution:
+class Solution(object):
+    def transpose(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: List[List[int]]
+       """
+        trans=[]
+         
+        m=len(matrix)
+        n=len(matrix[0])
+        for j in range(n):
+            newrow=[]
+            for i in range(m):
+                newrow.append(matrix[i][j])
+            trans.append(newrow)
+        return trans
+
+          
