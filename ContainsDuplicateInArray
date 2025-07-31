@@ -1,0 +1,18 @@
+class Solution(object):
+    def containsDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        count=[nums[0]]
+        n=len(nums)
+        result=-1
+
+        for x in range(1,n):
+            if nums[x] in count:
+                return True
+            else:
+                count.append(x)
+        return False
+            
+
