@@ -4,15 +4,10 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        count=[nums[0]]
-        n=len(nums)
-        result=-1
-
-        for x in range(1,n):
-            if nums[x] in count:
+        seen=set()
+        for i in nums:
+            if i in seen:
                 return True
-            else:
-                count.append(x)
+            seen.add(i)
         return False
             
-
