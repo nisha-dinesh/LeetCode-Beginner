@@ -1,0 +1,18 @@
+  class Solution(object):
+    def sortedSquares(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        
+        n=len(nums)
+        sq=[0]*n
+        j=0
+        while j <n:
+            for i in range(n):
+                
+                sq[j]=(nums[i])**2
+                j+=1
+            answer=sorted(sq)
+            return answer
+
