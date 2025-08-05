@@ -1,0 +1,20 @@
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        nums=[]
+        if x<0:
+            return False
+        while x>0 :
+            nums.append(x%10)
+            x//=10
+        n=len(nums)
+        
+        for i in range(n//2):
+            if nums[i]!=nums[-i-1]:
+                return False
+        return True
+
+
