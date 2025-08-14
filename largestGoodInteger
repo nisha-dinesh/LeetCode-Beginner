@@ -1,0 +1,17 @@
+class Solution(object):
+    def largestGoodInteger(self, num):
+        """
+        :type num: str
+        :rtype: str
+        """
+        digit=list(num)
+        count=[]
+        maxgood=""
+        for i in range (len(digit)-2):
+            if digit[i]==digit[i+1]==digit[i+2]:
+                good= digit[i]*3
+                if good> maxgood:
+                    maxgood=good
+        return maxgood
+            
+        
