@@ -1,0 +1,17 @@
+class Solution(object):
+    def reverseWords(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        words= s.split()
+        n=len(words)
+        for i in range(n):
+            letter=list(words[i])
+            m=len(letter)
+            for j in range(m//2):
+                letter[j],letter[-j-1]=letter[-j-1],letter[j]
+            words[i]="".join(letter)
+        s=" ".join(words)
+        return s
+
