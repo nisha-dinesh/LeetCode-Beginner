@@ -1,0 +1,19 @@
+class Solution(object):
+    def maxPower(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        letters=list(s)
+        maxrep=1
+        rep=1
+        for i in range(1,len(letters)):
+            
+            if letters[i]==letters[i-1]:
+                rep+=1
+                if maxrep<rep:
+                    maxrep=rep
+            else:
+                rep=1
+        return maxrep
+                
